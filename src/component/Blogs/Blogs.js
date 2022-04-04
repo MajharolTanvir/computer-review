@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='container'>
+        <div className='container text-black py-5'>
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
@@ -12,7 +12,7 @@ const Blogs = () => {
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <strong>CONTEXT API</strong> হল এক ধরণের গ্লোবাল ভেরিয়েবল । যা props drilling এর পরিবর্তে ব্যাবহার হয় । এটি props drilling  এর মত উপর থেকে নিচের দিকে ধাপে ধাপে props আকারে না গিয়ে context api এর মাধ্যমে parent component থেকে সরাসরি child component এ কাজ করে । এর ক্ষেত্রে এটির মাঝে একাধিক component থাকলেও তাতে কোন পরিবর্তন আসে নাহ । 
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@ const Blogs = () => {
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <strong>Semantic tag</strong> হল একটি ওয়েবসাইট এর মুল কাঠামো । যার প্রতিটি বিভক্তিকে আলাদা আলাদা tag এর মাধ্যমে তার কাজ বা অবস্থান সম্পরকে অবহিত করে । এটির প্রতিটি Tag দ্বারা এটির প্রতিটি বিভক্তির পরিচয় পাওয়া যায় । যার দ্বারা একটি ওয়েবসাইট কে আর seo এর জন্য আলাদা কাজ করার ততটা প্রয়োজন হয় নাহ । 
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,9 @@ const Blogs = () => {
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <li><strong>Inline</strong></li>
+                            <li><strong>Block</strong></li>
+                            <li><strong>Inline-Block</strong></li>
                         </div>
                     </div>
                 </div>

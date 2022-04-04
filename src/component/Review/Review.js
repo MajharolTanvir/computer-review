@@ -1,23 +1,37 @@
 import React from 'react';
 import useReview from '../../hooks/useReview';
+import Rating from 'react-rating';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 const Review = () => {
     const [reviews] = useReview([])
     return (
-        <div className='container my-5 py-3'>
-            <div className='row row-cols-xl-2 row-cols-1 row-cols-sm-2'>
-                {
-                    reviews.map(review => <div className="row align-items-center p-2 border border-2 py-2" key={review.id}>
-                        <div className="col-xl-4">
-                            <img className='w-100' src={review.picture} alt="" />
-                        </div>
-                        <div className="col-xl-8">
-                            <h5>Name: {review.name}</h5>
-                            <p>{review.about}</p>
-                        </div>
-                    </div>)
-                }
-            </div>
+        <div className='container mx-auto row py-5'>
+            {
+                reviews.map(review => <div className='col-lg-4 col-sm-12 col-md-6 mx-auto my-3'>
+                    <Card className='text-black'>
+                        <Card.Img variant="top" src={review.picture} />
+                        <Card.Body>
+                            <Card.Title>{review.name}</Card.Title>
+                            <Card.Text>
+                                {review.about}
+                            </Card.Text>
+                        </Card.Body>
+                        <ListGroup className="list-group-flush">
+                            <ListGroupItem>
+                                <Rating
+                                    initialRating={3.5}
+                                    emptySymbol={<FontAwesomeIcon icon={faStar} />}
+                                    fullSymbol={<FontAwesomeIcon style={{ color: 'goldenrod' }} icon={faStar} />}
+                                    readonly
+                                ></Rating>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </Card>
+                </div>)
+            }
         </div>
     );
 };
