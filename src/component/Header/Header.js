@@ -9,13 +9,13 @@ const Header = () => {
                     <h4>Latest Laptop</h4>
                 </div>
                 <div className="d-flex">
-                    <NavLink to="/" className={isActive => "nav-link" + (!isActive ? " unselected" : "")
+                    <NavLink to="/" className={isActive => "nav-link" + (!isActive ? "red" : "blue")
                     }>Home</NavLink>
-                    <NavLink to="/review" className={isActive => "nav-link" + (!isActive ? " unselected" : "")
+                    <NavLink to="/review" className={isActive => "nav-link" + (!isActive ? "red" : "blue")
                     }>Review</NavLink>
-                    <NavLink to="/dashboard" className={isActive => "nav-link" + (!isActive ? " unselected" : "")
+                    <NavLink to="/dashboard" className={isActive => "nav-link" + (!isActive ? "red" : "blue")
                     }>Dashboard</NavLink>
-                    <NavLink to="/blogs" className={isActive => "nav-link" + (!isActive ? " unselected" : "")
+                    <NavLink to="/blogs" className={isActive => "nav-link" + (!isActive ? "red" : "blue")
                     }>Blogs</NavLink>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import image from '../../img/gsmarena_000.jpg'
 
 const Home = () => {
     const [reviews] = useReview([])
+    const reviewDetails = reviews.slice(0, 3)
 
     return (
         <div className='container'>
@@ -19,19 +20,22 @@ const Home = () => {
             </div>
             <div>
                 <h3 className='text-center py-4'>Review</h3>
-                <div className='row row-cols-lg-2'>
-                    {
-                        reviews.map(review =>
-                            <div className="row border border-1">
-                                <div className="col-xl-4">
-                                    <img className='w-100' src={review.picture} alt="" />
-                                </div>
-                                <div className="col-xl-8">
-                                    <h6>Name: {review.name}</h6>
-                                    <p>{review.about}</p>
-                                </div>
-                            </div>)
-                    }
+                <div className='row'>
+                    <div className="col-xl-6">
+                        {
+                            reviewDetails.map(review =>
+                                <div className="row border border-1" key={review.id}>
+                                    <div className="col-xl-4">
+                                        <img className='w-100' src={review.picture} alt="" />
+                                    </div>
+                                    <div className="col-xl-8">
+                                        <h6>Name: {review.name}</h6>
+                                        <p>{review.about}</p>
+                                    </div>
+                                </div>)
+                        }
+                    </div>
+
                 </div>
                 <div className='py-4 text-center'>
                     <button className='py-2 px-5 rounded-3 border-0 my-4'>See all review</button>
