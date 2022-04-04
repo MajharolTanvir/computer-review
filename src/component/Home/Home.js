@@ -1,10 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useReview from '../../hooks/useReview';
 import image from '../../img/gsmarena_000.jpg'
 
 const Home = () => {
     const [reviews] = useReview([])
     const reviewDetails = reviews.slice(0, 3)
+
+    const navigate = useNavigate()
+
+    const goToReview = () => {
+        navigate(`review`)
+    }
 
     return (
         <div className='container'>
@@ -35,10 +42,9 @@ const Home = () => {
                                 </div>)
                         }
                     </div>
-
                 </div>
                 <div className='py-4 text-center'>
-                    <button className='py-2 px-5 rounded-3 border-0 my-4'>See all review</button>
+                    <button onClick={goToReview} className='py-2 px-5 rounded-3 border-0 my-4'>See all review</button>
                 </div>
             </div>
         </div>

@@ -14,6 +14,7 @@ const Dashboard = () => {
         <div className='container'>
             <div className='row my-5'>
                 <div className="col-12 sol-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <h5>Chart: 01</h5>
                     <div className='border border-2 p-4'>
                         <ComposedChart width={500} height={250} data={data}>
                             <XAxis dataKey="month" />
@@ -28,6 +29,7 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className="col-12 sol-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <h5>Chart: 02</h5>
                     <div className='border border-2 p-4'>
                         <RadarChart outerRadius={90} width={500} height={250} data={data}>
                             <PolarGrid />
@@ -42,6 +44,7 @@ const Dashboard = () => {
             </div>
             <div className='row my-5'>
                 <div className="col-12 sol-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <h5>Chart: 03</h5>
                     <div className='border border-2 p-4'>
                         <LineChart width={500} height={250} data={data}
                             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
@@ -56,6 +59,7 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className="col-12 sol-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <h5>Chart: 04</h5>
                     <div className='border border-2 p-4'>
                         <AreaChart width={500} height={250} data={data}
                             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
