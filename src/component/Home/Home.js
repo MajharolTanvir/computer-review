@@ -44,14 +44,14 @@ const Home = () => {
                                             </Card.Text>
                                         </Card.Body>
                                         <ListGroup className="list-group-flush">
-                                            <ListGroupItem>
+                                        <ListGroupItem>
                                                 <Rating
                                                     initialRating={3.5}
                                                     emptySymbol={<FontAwesomeIcon icon={faStar} />}
                                                     fullSymbol={<FontAwesomeIcon style={{ color: 'goldenrod' }} icon={faStar} />}
                                                     readonly
                                                 ></Rating>
-                                            </ListGroupItem>
+                                        </ListGroupItem>
                                         </ListGroup>
                                     </Card>
                                 </div>)

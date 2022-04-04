@@ -36,9 +36,9 @@ const Blogs = () => {
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <li><strong>Inline</strong></li>
-                            <li><strong>Block</strong></li>
-                            <li><strong>Inline-Block</strong></li>
+                            <li><strong>Inline tag</strong> বলা হয় একটি লাইনে কোন Tag ব্যাবহারের পর যদি সে তার প্রয়োজন অনুযায়ী জায়গা নিয়ে বাকী জায়গা ছেড়ে দেয় । </li>
+                            <li><strong>Block tag</strong>বলা হয় একটি লাইনে কোন Tag ব্যাবহারের পর যদি সে তার প্রয়োজনীয় জায়গা নেওয়ার পর বাকী জায়গা নিয়ে নেয় । </li>
+                            <li><strong>Inline-Block</strong> বলা হয় কোন স্থানে কোন tag ব্যাবহারের পর তার hight width আলাদা ভাবে সেট করাকে।</li>
                         </div>
                     </div>
                 </div>
