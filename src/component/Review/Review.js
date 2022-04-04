@@ -9,10 +9,11 @@ const Review = () => {
     const [reviews] = useReview([])
     return (
         <div className='container mx-auto row py-5'>
+            <h3 className='text-center py-4'>Check our customer reviews</h3>
             {
                 reviews.map(review => <div className='col-lg-4 col-sm-12 col-md-6 mx-auto my-3'>
-                    <Card className='text-black'>
-                        <Card.Img variant="top" src={review.picture} />
+                    <Card className='text-black shadow-lg'>
+                        <Card.Img variant="top" src={review.picture} key={review.id} />
                         <Card.Body>
                             <Card.Title>{review.name}</Card.Title>
                             <Card.Text>

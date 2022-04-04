@@ -1,8 +1,9 @@
 import React from 'react';
+import './Blogs.css'
 
 const Blogs = () => {
     return (
-        <div className='container text-black py-5'>
+        <div className='container text-black blogs-part py-5 my-5'>
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">

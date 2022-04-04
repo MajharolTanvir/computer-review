@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Area, AreaChart, Bar, CartesianGrid, ComposedChart, Legend, Line, LineChart, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, Tooltip, XAxis, YAxis } from 'recharts';
+import './Dashboard.css'
 
 const Dashboard = () => {
     const [data, setData] = useState([])
-    console.log(data);
 
     useEffect(() => {
         fetch('data.json')
@@ -13,8 +13,8 @@ const Dashboard = () => {
     return (
         <div className='container'>
             <div className='row py-5'>
-                <div className="col-12 sol-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <h5>Chart: 01</h5>
+                <div className="col-12 sol-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <h5>Chart: ComposedChart</h5>
                     <div className='border border-2 p-4'>
                         <ComposedChart width={500} height={250} data={data}>
                             <XAxis dataKey="month" />
@@ -22,29 +22,29 @@ const Dashboard = () => {
                             <Tooltip />
                             <Legend />
                             <CartesianGrid stroke="#f5f5f5" />
-                            <Area type="monotone" dataKey="investment" fill="#8884d8" stroke="#8884d8" />
+                            <Area type="monotone" dataKey="investment" fill="#8884d8" stroke="#ff03cd" />
                             <Bar dataKey="revenue" barSize={20} fill="#413ea0" />
                             <Line type="monotone" dataKey="sell" stroke="#ff7300" />
                         </ComposedChart>
                     </div>
                 </div>
-                <div className="col-12 sol-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <h5>Chart: 02</h5>
+                <div className="col-12 sol-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <h5>Chart: RadarChart</h5>
                     <div className='border border-2 p-4'>
                         <RadarChart outerRadius={90} width={500} height={250} data={data}>
                             <PolarGrid />
                             <PolarAngleAxis dataKey="month" />
                             <PolarRadiusAxis angle={30} domain={[0, 150]} />
                             <Radar name="Mike" dataKey="investment" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-                            <Radar name="Lily" dataKey="revenue" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
+                            <Radar name="Lily" dataKey="revenue" stroke="#ff037d" fill="#ff037d" fillOpacity={0.6} />
                             <Legend />
                         </RadarChart>
                     </div>
                 </div>
             </div>
             <div className='row py-5'>
-                <div className="col-12 sol-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <h5>Chart: 03</h5>
+                <div className="col-12 sol-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <h5>Chart: LineChart</h5>
                     <div className='border border-2 p-4'>
                         <LineChart width={500} height={250} data={data}
                             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
@@ -53,13 +53,13 @@ const Dashboard = () => {
                             <YAxis />
                             <Tooltip />
                             <Legend />
-                            <Line type="monotone" dataKey="revenue" stroke="#8884d8" />
-                            <Line type="monotone" dataKey="investment" stroke="#82ca9d" />
+                            <Line type="monotone" dataKey="revenue" stroke="#ff8c00" />
+                            <Line type="monotone" dataKey="investment" stroke="#ff001e" />
                         </LineChart>
                     </div>
                 </div>
-                <div className="col-12 sol-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <h5>Chart: 04</h5>
+                <div className="col-12 sol-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <h5>Chart: AreaChart</h5>
                     <div className='border border-2 p-4'>
                         <AreaChart width={500} height={250} data={data}
                             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>

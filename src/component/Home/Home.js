@@ -26,7 +26,7 @@ const Home = () => {
                     <p>This is our go-to recommendation for those in search of a MacOS laptop for everyday basic use. The MacBook Air was updated in the first half of 2020 with new Intel processors and, most importantly, a new keyboard. However, in November, Apple announced its new homegrown M1 processors would be replacing Intel's CPUs in the Air. Using Apple's M1, the company promises an operating system with better performance and longer battery life -- up to 18 hours.</p>
                 </div>
                 <div className="col-12 col-md-6 col-lg-6 col-xl-6 border-3">
-                    <img className='w-100' src={image} alt="" />
+                    <img className='w-100 shadow-lg rounded-3' src={image} alt="" />
                 </div>
             </div>
             <div>
@@ -35,7 +35,7 @@ const Home = () => {
                         {
                         reviewDetails.map(review =>
                                 <div className="col-xl-4">
-                                    <Card className='text-black' style={{ width: '18rem' }}>
+                                <Card className='text-black shadow-lg' style={{ width: '18rem' }}>
                                         <Card.Img variant="top" src={review.picture} />
                                         <Card.Body>
                                             <Card.Title>{review.name}</Card.Title>

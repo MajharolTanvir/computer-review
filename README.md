@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# Latest laptop review
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was latest laptop review  [Check website](https://latest-laptop.netlify.app/).
 
-## Available Scripts
+## Description:
 
-In the project directory, you can run:
+* Goto home you can see what is the latest laptop.
+* Goto Review you can find Customer review. 
+* Goto Dashboard you can see the last sells chart.
+* Goto Blogs you can learn 3 Important question ans.
+* Goto About you can Check what features Can here in this Laptop. 
 
 ### `npm start`
 
